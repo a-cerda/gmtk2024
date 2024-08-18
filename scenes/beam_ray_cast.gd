@@ -1,5 +1,11 @@
 extends RayCast2D
 
+const DEFAULT_COLOR: Color = Color(255, 255, 255)
+const ENLARGER_COLOR: Color = Color(255, 0, 0)
+const REDUCER_COLOR: Color = Color(0, 0, 255)
+
+var beam_color: Color = DEFAULT_COLOR
+
 var is_casting: bool = false :
 	set(value): 
 		is_casting = value
@@ -10,12 +16,22 @@ var is_casting: bool = false :
 			disapear()
 		set_physics_process(is_casting)
 
+
 func _ready():
 	is_casting = false
 
+
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		self.is_casting = event.pressed
+	if event.is_action_pressed("enlarger_shot"):
+		self.beam_color = ENLARGER_COLOR
+		self.is_casting = true
+	elif event.is_action_pressed("reducer_shot"):
+		self.beam_color = REDUCER_COLOR
+		self.is_casting = true
+	else:
+		self.is_casting = false
+		self.beam_color = DEFAULT_COLOR
+
 
 func _physics_process(delta: float) -> void:
 	var cast_point := target_position
@@ -28,6 +44,7 @@ func _physics_process(delta: float) -> void:
 
 func appear() -> void:
 	var tween = create_tween()
+	tween.tween_property(%BeamLine, "default_color", beam_color, 0.2)
 	tween.tween_property(%BeamLine, "width", 3.0, 0.2)
 
 
