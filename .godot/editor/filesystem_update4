@@ -1,3 +1,6 @@
+res://test_level.tscn
 res://scenes/player.tscn
-res://scenes/player.gd
 res://scenes/terrain.tscn
+res://scenes/player.gd
+res://scenes/resizable_crate.tscn
+res://scenes/resizable_crate.gd

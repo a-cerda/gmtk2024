@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://8gm3x82phuj2"]
+
+[ext_resource type="Script" path="res://scenes/resizable_crate.gd" id="1_fmyj6"]
+[ext_resource type="Texture2D" uid="uid://iro31editsph" path="res://sprites/tile_crateDiagonal.png" id="2_dbcls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tscud"]
+size = Vector2(60, 60)
+
+[node name="ResizableCrate" type="AnimatableBody2D"]
+script = ExtResource("1_fmyj6")
+
+[node name="Crate" type="Sprite2D" parent="."]
+texture = ExtResource("2_dbcls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tscud")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

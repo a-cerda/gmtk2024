@@ -1,4 +1,5 @@
+CollisionShape2D
+AnimatableBody2D
 TileMapLayer
 TileMap
-CollisionShape2D
 CharacterBody2D

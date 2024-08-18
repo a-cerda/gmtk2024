@@ -7,8 +7,8 @@
 size = Vector2(40, 62)
 
 [node name="Player" type="CharacterBody2D"]
-motion_mode = 1
 script = ExtResource("1_en5cw")
+SPEED = 300.0
 
 [node name="CharacterSquareRed" type="Sprite2D" parent="."]
 texture = ExtResource("2_h18qg")
