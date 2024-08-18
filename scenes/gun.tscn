@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2a6pblfqnoo8"]
+
+[ext_resource type="Script" path="res://scenes/gun.gd" id="1_fkbn7"]
+[ext_resource type="Texture2D" uid="uid://8j0ixd0rgl71" path="res://sprites/item_blaster.png" id="1_x0shb"]
+[ext_resource type="Script" path="res://scenes/beam_ray_cast.gd" id="3_7i4dd"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_fkbn7")
+
+[node name="GunPivot" type="Marker2D" parent="."]
+
+[node name="Pistol" type="Sprite2D" parent="GunPivot"]
+position = Vector2(47, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_x0shb")
+
+[node name="BeamOrigin" type="Marker2D" parent="GunPivot/Pistol"]
+unique_name_in_owner = true
+position = Vector2(16, -4)
+
+[node name="BeamRayCast" type="RayCast2D" parent="GunPivot/Pistol/BeamOrigin"]
+target_position = Vector2(304, 0)
+script = ExtResource("3_7i4dd")
+
+[node name="BeamLine" type="Line2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 0, 0)
