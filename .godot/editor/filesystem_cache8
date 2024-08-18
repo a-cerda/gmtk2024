@@ -1,0 +1,8 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1724011263
+icon.svg::CompressedTexture2D::2522537211926704556::1724001288::1724001294::1::::<><>::
+::res://scenes/::1724011263
+player.tscn::PackedScene::5983340541411577798::1724011252::0::1::::<><>::uid://cxagkd6vg3ot0::::res://sprites/character_squareRed.png
+::res://sprites/::1724011226
+character_squareRed.png::CompressedTexture2D::6387567137378861303::1724011182::1724011226::1::::<><>::
+spritesheet_default.png::Texture2D::3072441339334641013::0::0::1::::<><>::
