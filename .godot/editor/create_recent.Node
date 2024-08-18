@@ -1,2 +1,4 @@
+TileMapLayer
+TileMap
 CollisionShape2D
 CharacterBody2D
