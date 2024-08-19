@@ -28,6 +28,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("reducer_shot"):
 		self.beam_color = REDUCER_COLOR
 		self.is_casting = true
+	elif event is InputEventMouseMotion:
+		pass
 	else:
 		self.is_casting = false
 		self.beam_color = DEFAULT_COLOR
@@ -44,7 +46,7 @@ func _physics_process(delta: float) -> void:
 
 func appear() -> void:
 	var tween = create_tween()
-	tween.tween_property(%BeamLine, "default_color", beam_color, 0.2)
+	tween.tween_property(%BeamLine, "default_color", beam_color, 0.1)
 	tween.tween_property(%BeamLine, "width", 3.0, 0.2)
 
 

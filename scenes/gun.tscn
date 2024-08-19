@@ -19,9 +19,11 @@ unique_name_in_owner = true
 position = Vector2(16, -4)
 
 [node name="BeamRayCast" type="RayCast2D" parent="GunPivot/Pistol/BeamOrigin"]
+z_index = -1
 target_position = Vector2(700, 0)
 script = ExtResource("3_7i4dd")
 
 [node name="BeamLine" type="Line2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
 unique_name_in_owner = true
+z_index = -1
 points = PackedVector2Array(0, 0, 0, 0)
