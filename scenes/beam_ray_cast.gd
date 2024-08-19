@@ -28,9 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("reducer_shot"):
 		self.beam_color = REDUCER_COLOR
 		self.is_casting = true
-	elif event is InputEventMouseMotion:
-		pass
-	else:
+	elif event.is_action_released("enlarger_shot") or event.is_action_released("reducer_shot"):
 		self.is_casting = false
 		self.beam_color = DEFAULT_COLOR
 
