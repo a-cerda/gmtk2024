@@ -30,15 +30,24 @@ func _unhandled_input(event: InputEvent) -> void:
 		self.is_casting = true
 	elif event.is_action_released("enlarger_shot") or event.is_action_released("reducer_shot"):
 		self.is_casting = false
+		self.target_position = Vector2(0.0, 0.0)
 		self.beam_color = DEFAULT_COLOR
 
 
 func _physics_process(delta: float) -> void:
+	# Max length of the beam raycast 
+	var max_beam_length = get_viewport().size.length() * 0.75
+	# If the player is shooting (or is casting) and the length is not the larger it can be
+	# make it grow!
+	if self.is_casting and self.target_position.length() <= max_beam_length and not is_colliding():
+		self.target_position += Vector2(delta * 5000.0, 0) # 5k 
 	var cast_point := target_position
+
 	force_raycast_update()
-	
 	if is_colliding():
 		cast_point = to_local(get_collision_point())
+		self.target_position = cast_point
+		
 	%BeamLine.points[1] = cast_point
 
 
