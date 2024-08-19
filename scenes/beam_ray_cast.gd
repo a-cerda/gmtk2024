@@ -45,11 +45,9 @@ func _physics_process(delta: float) -> void:
 
 
 func appear() -> void:
-	var tween = create_tween()
-	tween.tween_property(%BeamLine, "default_color", beam_color, 0.1)
-	tween.tween_property(%BeamLine, "width", 3.0, 0.2)
+	%BeamLine.default_color = beam_color
+	%BeamLine.width = 3.0
 
 
 func disapear() -> void:
-	var tween = create_tween()
-	tween.tween_property(%BeamLine, "width", 0, 0.1)
+	%BeamLine.width = 0
