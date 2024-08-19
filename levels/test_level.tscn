@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=4 uid="uid://b8188jt64g5se"]
+
+[ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_8jmgf"]
+[ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_mi7b4"]
+[ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_xj6c1"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8jmgf")]
+position = Vector2(374, 123)
+
+[node name="Terrain" parent="." instance=ExtResource("2_mi7b4")]
+tile_map_data = PackedByteArray("AAABAAQAAwADAAAAAAACAAQAAwAFAAEAAAADAAQAAwAEAAIAAAAEAAQAAwADAAAAAAAFAAQAAwAEAAIAAAAGAAQAAwAEAAIAAAAHAAQAAwAEAAIAAAAIAAQAAwADAAAAAAAJAAQAAwAEAAIAAAAKAAQAAwAEAAIAAAALAAQAAwAEAAIAAAAMAAQAAwAFAAEAAAANAAQAAwACAAoAAAANAAcAAwAFAAEAAAAOAAcAAwADAAAAAAAPAAcAAwADAAAAAAAQAAcAAwAFAAEAAAARAAcAAwACAAoAAAABAAUAAwAGAAkAAAACAAUAAwAGAAkAAAADAAUAAwAGAAkAAAAEAAUAAwAGAAkAAAAFAAUAAwAGAAkAAAAGAAUAAwAGAAkAAAAHAAUAAwAGAAkAAAAIAAUAAwAGAAkAAAAJAAUAAwAGAAkAAAAKAAUAAwAGAAkAAAALAAUAAwAGAAkAAAAMAAUAAwAGAAkAAAANAAUAAwAGAAkAAAA=")
+
+[node name="ResizableCrate" parent="." instance=ExtResource("3_xj6c1")]
+position = Vector2(705, 166)
+
+[node name="ResizableCrate2" parent="." instance=ExtResource("3_xj6c1")]
+position = Vector2(1019, 302)

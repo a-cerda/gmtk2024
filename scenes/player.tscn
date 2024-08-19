@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crim0kxnxdiq5"]
+[gd_scene load_steps=5 format=3 uid="uid://crim0kxnxdiq5"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_en5cw"]
 [ext_resource type="Texture2D" uid="uid://cxagkd6vg3ot0" path="res://sprites/character_squareRed.png" id="2_h18qg"]
+[ext_resource type="PackedScene" uid="uid://b2a6pblfqnoo8" path="res://scenes/gun.tscn" id="2_mwn4b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ocim"]
 size = Vector2(40, 62)
@@ -10,9 +11,13 @@ size = Vector2(40, 62)
 script = ExtResource("1_en5cw")
 SPEED = 300.0
 
+[node name="Gun" parent="." instance=ExtResource("2_mwn4b")]
+
 [node name="CharacterSquareRed" type="Sprite2D" parent="."]
 texture = ExtResource("2_h18qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_3ocim")
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -4,8 +4,9 @@ extends CharacterBody2D
 @export var GRAVITY: float = 700.0
 @export var JUMP_SPEED: float = 280.0
 @export var DRAG: float = 10.0
+@onready var PLAYER_SPAWN = self.position
 
-func _physics_process(delta: float) -> void:	
+func _physics_process(delta: float) -> void:
 	# if is_in_air: velocity * delta
 	# in ground: inmediate velocity
 	if is_on_floor():
@@ -24,3 +25,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x += delta * SPEED
 		velocity.y += delta * GRAVITY
 	move_and_slide()
+	if position.x > DisplayServer.screen_get_usable_rect().size.x or position.y > DisplayServer.screen_get_usable_rect().size.y:
+		respawn()
+
+func respawn():
+	position = PLAYER_SPAWN
