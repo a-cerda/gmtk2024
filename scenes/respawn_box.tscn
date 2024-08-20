@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqxtb4vhu4j8m"]
+
+[ext_resource type="Script" path="res://scenes/respawn_box.gd" id="1_em2dq"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w7866"]
+b = Vector2(0, 30)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rwnaa"]
+b = Vector2(42, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tc5eu"]
+b = Vector2(42, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7t8j6"]
+b = Vector2(1.90735e-06, 10.199)
+
+[node name="RespawnBox" type="Area2D"]
+scale = Vector2(26.8785, 21.8439)
+script = ExtResource("1_em2dq")
+
+[node name="Left" type="CollisionShape2D" parent="."]
+scale = Vector2(0.765808, 1.00588)
+shape = SubResource("SegmentShape2D_w7866")
+
+[node name="Top" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_rwnaa")
+
+[node name="Bottom" type="CollisionShape2D" parent="."]
+position = Vector2(0, 29)
+shape = SubResource("SegmentShape2D_tc5eu")
+
+[node name="Right" type="CollisionShape2D" parent="."]
+position = Vector2(43, 30)
+scale = Vector2(-0.753825, -3.09049)
+shape = SubResource("SegmentShape2D_7t8j6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
