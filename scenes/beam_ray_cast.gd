@@ -6,14 +6,18 @@ const REDUCER_COLOR: Color = Color(0, 0, 255)
 
 var beam_color: Color = DEFAULT_COLOR
 var GROW_OR_SHRINK: int = 0
+@onready var RAY = $Ray
+@onready var GROW = $Grow
+@onready var SHRINK = $Shrink
 
 var is_casting: bool = false :
 	set(value): 
 		is_casting = value
-		
 		if is_casting:
+			RAY.play()
 			appear()
 		else:
+			RAY.stop()
 			disapear()
 		set_physics_process(is_casting)
 
@@ -55,8 +59,10 @@ func _physics_process(delta: float) -> void:
 		var colliding_body = self.get_collider()
 		if colliding_body.has_method("grow"):
 			if GROW_OR_SHRINK == 1:
+				GROW.play()
 				colliding_body.grow()
 			elif GROW_OR_SHRINK == 2:
+				SHRINK.play()
 				colliding_body.shrink()
 			
 		

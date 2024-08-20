@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2a6pblfqnoo8"]
+[gd_scene load_steps=7 format=3 uid="uid://b2a6pblfqnoo8"]
 
 [ext_resource type="Script" path="res://scenes/gun.gd" id="1_fkbn7"]
 [ext_resource type="Texture2D" uid="uid://8j0ixd0rgl71" path="res://sprites/item_blaster.png" id="1_x0shb"]
 [ext_resource type="Script" path="res://scenes/beam_ray_cast.gd" id="3_7i4dd"]
+[ext_resource type="AudioStream" uid="uid://dqgjqm3pxcrmh" path="res://audio/Ray.wav" id="4_g5gnv"]
+[ext_resource type="AudioStream" uid="uid://ensyasi51dc5" path="res://audio/Grow 2.wav" id="5_2wl3k"]
+[ext_resource type="AudioStream" uid="uid://bq5r1vbdbrgrh" path="res://audio/Shrink 2.wav" id="6_able7"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_fkbn7")
@@ -23,7 +26,20 @@ z_index = -1
 target_position = Vector2(10, 0)
 script = ExtResource("3_7i4dd")
 
+[node name="Ray" type="AudioStreamPlayer2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
+position = Vector2(-110, 2)
+scale = Vector2(2, 2)
+stream = ExtResource("4_g5gnv")
+
 [node name="BeamLine" type="Line2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
 unique_name_in_owner = true
 z_index = -1
 points = PackedVector2Array(0, 0, 0, 0)
+
+[node name="Grow" type="AudioStreamPlayer2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
+stream = ExtResource("5_2wl3k")
+volume_db = 16.085
+
+[node name="Shrink" type="AudioStreamPlayer2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
+stream = ExtResource("6_able7")
+volume_db = 16.785

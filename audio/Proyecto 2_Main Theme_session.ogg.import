@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjt5d7v6du45o"
+path="res://.godot/imported/Proyecto 2_Main Theme_session.ogg-67b6f73afa26acfce061fa91048d364b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Proyecto 2_Main Theme_session.ogg"
+dest_files=["res://.godot/imported/Proyecto 2_Main Theme_session.ogg-67b6f73afa26acfce061fa91048d364b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
