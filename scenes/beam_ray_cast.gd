@@ -6,9 +6,16 @@ const REDUCER_COLOR: Color = Color(0, 0, 255)
 
 var beam_color: Color = DEFAULT_COLOR
 var GROW_OR_SHRINK: int = 0
-@onready var RAY = $Ray
-@onready var GROW = $Grow
-@onready var SHRINK = $Shrink
+@onready var RAY: AudioStreamPlayer2D = $Ray
+@onready var GROW: AudioStreamPlayer2D = $Grow
+@onready var SHRINK: AudioStreamPlayer2D = $Shrink
+var vol = 7.0
+
+func _ready() -> void:
+	RAY.volume_db -= vol
+	GROW.volume_db -= vol
+	SHRINK.volume_db -= vol
+	is_casting = false
 
 var is_casting: bool = false :
 	set(value): 
@@ -19,11 +26,9 @@ var is_casting: bool = false :
 		else:
 			RAY.stop()
 			disapear()
+			GROW.stop()
+			SHRINK.stop()
 		set_physics_process(is_casting)
-
-
-func _ready():
-	is_casting = false
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -59,11 +64,20 @@ func _physics_process(delta: float) -> void:
 		var colliding_body = self.get_collider()
 		if colliding_body.has_method("grow"):
 			if GROW_OR_SHRINK == 1:
-				GROW.play()
+				if not GROW.playing:
+					GROW.play()
 				colliding_body.grow()
+				if GROW.get_playback_position() > 2.11:
+					GROW.stop()
 			elif GROW_OR_SHRINK == 2:
-				SHRINK.play()
+				if not SHRINK.playing:
+					SHRINK.play()
 				colliding_body.shrink()
+				if SHRINK.get_playback_position() > 1.16:
+					SHRINK.stop()
+		else:
+			GROW.stop()
+			SHRINK.stop()
 			
 		
 	%BeamLine.points[1] = cast_point
