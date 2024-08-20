@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://b8188jt64g5se"]
+[gd_scene load_steps=5 format=4 uid="uid://b8188jt64g5se"]
 
 [ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_8jmgf"]
 [ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_mi7b4"]
 [ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_xj6c1"]
+[ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="4_lntjx"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -17,3 +18,7 @@ position = Vector2(705, 166)
 
 [node name="ResizableCrate2" parent="." instance=ExtResource("3_xj6c1")]
 position = Vector2(1019, 302)
+
+[node name="RespawnBox" parent="." instance=ExtResource("4_lntjx")]
+position = Vector2(-39, -51)
+scale = Vector2(29.8633, 26.7273)

@@ -24,6 +24,7 @@ position = Vector2(16, -4)
 [node name="BeamRayCast" type="RayCast2D" parent="GunPivot/Pistol/BeamOrigin"]
 z_index = -1
 target_position = Vector2(10, 0)
+collision_mask = 9
 script = ExtResource("3_7i4dd")
 
 [node name="Ray" type="AudioStreamPlayer2D" parent="GunPivot/Pistol/BeamOrigin/BeamRayCast"]
