@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://bvl6o6wo3thra"]
+[gd_scene load_steps=8 format=4 uid="uid://bvl6o6wo3thra"]
 
 [ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_2pin7"]
 [ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_so2os"]
 [ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_3ym8w"]
 [ext_resource type="PackedScene" path="res://scenes/background.tscn" id="4_g5dd4"]
-[ext_resource type="PackedScene" path="res://scenes/finish.tscn" id="5_jma4t"]
+[ext_resource type="PackedScene" uid="uid://bnm32m4ehkfge" path="res://scenes/finish.tscn" id="5_jma4t"]
 [ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="6_5fuk8"]
+[ext_resource type="PackedScene" uid="uid://b5ajromd3s5mr" path="res://levels/level_2.tscn" id="6_7uhe7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,12 +25,13 @@ position = Vector2(559, 156)
 scale = Vector2(4.17776, 4.17776)
 
 [node name="Sprite2D" parent="." instance=ExtResource("4_g5dd4")]
-position = Vector2(443, 1192)
-scale = Vector2(4.25535, 4.12616)
+position = Vector2(807.986, 342.187)
+scale = Vector2(4.98965, 5.12789)
 
 [node name="Finish" parent="." instance=ExtResource("5_jma4t")]
-position = Vector2(1426, 28)
+position = Vector2(1174, 225)
 scale = Vector2(1.45908, 1.45908)
+next_level = ExtResource("6_7uhe7")
 
 [node name="RespawnBox" parent="." instance=ExtResource("6_5fuk8")]
 position = Vector2(-137, -175)

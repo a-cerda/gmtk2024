@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://4w6koib37lr4"]
+[gd_scene load_steps=8 format=4 uid="uid://4w6koib37lr4"]
 
 [ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_ids8w"]
 [ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_0cedc"]
 [ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_r4va5"]
 [ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="4_224a1"]
-[ext_resource type="PackedScene" path="res://scenes/finish.tscn" id="5_3wly7"]
+[ext_resource type="PackedScene" uid="uid://bnm32m4ehkfge" path="res://scenes/finish.tscn" id="5_3wly7"]
+[ext_resource type="PackedScene" uid="uid://bh4egmjsdumou" path="res://levels/level_1.tscn" id="6_oh7da"]
 [ext_resource type="PackedScene" path="res://scenes/background.tscn" id="6_yb0v3"]
 
 [node name="TestLevel" type="Node2D"]
@@ -30,6 +31,7 @@ position = Vector2(738, 392)
 [node name="Finish" parent="." instance=ExtResource("5_3wly7")]
 position = Vector2(382, 430)
 scale = Vector2(1.4587, 1.4587)
+next_level = ExtResource("6_oh7da")
 
 [node name="Sprite2D" parent="." instance=ExtResource("6_yb0v3")]
 position = Vector2(664, 380)
