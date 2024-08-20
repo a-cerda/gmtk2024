@@ -1,16 +1,16 @@
-[gd_scene load_steps=7 format=4 uid="uid://4t5eid80ubsq"]
+[gd_scene load_steps=7 format=4 uid="uid://bvl6o6wo3thra"]
 
 [ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_2pin7"]
 [ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_so2os"]
 [ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_3ym8w"]
-[ext_resource type="PackedScene" uid="uid://c71crpf7oir31" path="res://scenes/background.tscn" id="4_g5dd4"]
-[ext_resource type="PackedScene" uid="uid://bq4i5wxuoqihp" path="res://scenes/finish.tscn" id="5_jma4t"]
+[ext_resource type="PackedScene" path="res://scenes/background.tscn" id="4_g5dd4"]
+[ext_resource type="PackedScene" path="res://scenes/finish.tscn" id="5_jma4t"]
 [ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="6_5fuk8"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_2pin7")]
-position = Vector2(1192, 266)
+position = Vector2(214, 148)
 
 [node name="Terrain" parent="." instance=ExtResource("2_so2os")]
 position = Vector2(424, 184)
