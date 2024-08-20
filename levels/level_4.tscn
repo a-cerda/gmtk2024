@@ -9,6 +9,30 @@
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(1734, 321)
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background2" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(640, -567)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background3" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(2271, -570)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background4" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(107, 1194)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background5" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(1732, 1212)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
 [node name="Player" parent="." instance=ExtResource("1_2pin7")]
 position = Vector2(214, 148)
 
@@ -24,11 +48,11 @@ position = Vector2(559, 156)
 scale = Vector2(4.17776, 4.17776)
 
 [node name="Sprite2D" parent="." instance=ExtResource("4_g5dd4")]
-position = Vector2(443, 1192)
+position = Vector2(103, 321)
 scale = Vector2(4.25535, 4.12616)
 
 [node name="Finish" parent="." instance=ExtResource("5_jma4t")]
-position = Vector2(1426, 28)
+position = Vector2(1174, 230)
 scale = Vector2(1.45908, 1.45908)
 
 [node name="RespawnBox" parent="." instance=ExtResource("6_5fuk8")]

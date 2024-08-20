@@ -9,6 +9,10 @@
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("6_yb0v3")]
+position = Vector2(664, 380)
+scale = Vector2(5.46462, 5.46462)
+
 [node name="Player" parent="." instance=ExtResource("1_ids8w")]
 position = Vector2(232, 195)
 
@@ -30,7 +34,3 @@ position = Vector2(738, 392)
 [node name="Finish" parent="." instance=ExtResource("5_3wly7")]
 position = Vector2(382, 430)
 scale = Vector2(1.4587, 1.4587)
-
-[node name="Sprite2D" parent="." instance=ExtResource("6_yb0v3")]
-position = Vector2(664, 380)
-scale = Vector2(5.46462, 5.46462)

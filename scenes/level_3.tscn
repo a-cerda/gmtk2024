@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://bk4rvupajqsya"]
+[gd_scene load_steps=8 format=4 uid="uid://bk4rvupajqsya"]
 
 [ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_dpxhr"]
+[ext_resource type="PackedScene" path="res://scenes/background.tscn" id="1_libqr"]
 [ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_fem24"]
 [ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_ldasf"]
 [ext_resource type="PackedScene" path="res://scenes/finish.tscn" id="5_6srg3"]
@@ -10,14 +11,51 @@
 [node name="Node2D" type="Node2D"]
 position = Vector2(2, 0)
 
-[node name="BackgroundGlacialMountainsLightened" type="Sprite2D" parent="."]
+[node name="Background" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(720, -437)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background2" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(2349, -448)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background3" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(3971, -466)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background4" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(-1020, 687)
+scale = Vector2(5.5026, 7.02778)
+texture = ExtResource("6_kma3d")
+
+[node name="Background5" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(4027, 1867)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background6" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(2399, 1863)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background7" parent="." instance=ExtResource("1_libqr")]
+position = Vector2(771, 1855)
+rotation = -3.14113
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Background8" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -20
 position = Vector2(1056.5, 661)
 scale = Vector2(5.5026, 7.02778)
 texture = ExtResource("6_kma3d")
 
-[node name="BackgroundGlacialMountainsLightened2" type="Sprite2D" parent="."]
+[node name="Background9" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -20
 position = Vector2(3170, 659)

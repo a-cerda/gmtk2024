@@ -9,7 +9,53 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="BackgroundGlacialMountainsLightened" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(108, -486)
+rotation = -3.13965
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background2" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(500, 1292)
+rotation = -3.13965
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background3" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(2160, 1287)
+rotation = -3.13965
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background4" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(1832, -506)
+rotation = -3.13965
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background5" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(-871, 402)
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background6" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -20
+position = Vector2(2630, 402)
+scale = Vector2(4.57813, 4.25926)
+texture = ExtResource("6_kdfno")
+
+[node name="Background7" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -20
 position = Vector2(882, 394)
