@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=4 uid="uid://crop6ee6b1mky"]
+
+[ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_n2bc1"]
+[ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_bm620"]
+[ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="3_ib6dw"]
+[ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="4_yuxse"]
+[ext_resource type="PackedScene" uid="uid://bq4i5wxuoqihp" path="res://scenes/finish.tscn" id="5_s8025"]
+[ext_resource type="PackedScene" uid="uid://c71crpf7oir31" path="res://scenes/background.tscn" id="6_wueat"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(213, 266)
+
+[node name="Player" parent="." instance=ExtResource("1_n2bc1")]
+position = Vector2(148, 273)
+
+[node name="Terrain" parent="." instance=ExtResource("2_bm620")]
+position = Vector2(-196, -266)
+tile_map_data = PackedByteArray("AAABAAQAAwAGAAkAAAABAAUAAwAGAAkAAAABAAYAAwAGAAkAAAABAAcAAwAGAAkAAAABAAgAAwAGAAkAAAABAAkAAwAGAAkAAAACAAkAAwAGAAkAAAADAAkAAwAGAAkAAAAEAAkAAwAGAAkAAAAFAAkAAwAGAAkAAAAPAAsAAwAGAAkAAAAQAAsAAwAGAAkAAAARAAsAAwAGAAkAAAASAAsAAwAGAAkAAAATAAsAAwAGAAkAAAAUAAsAAwAGAAkAAAAHAAsAAwAGAAkAAAAIAAsAAwAGAAkAAAAJAAsAAwAGAAkAAAAMAA4AAwAGAAkAAAA=")
+
+[node name="RespawnBox" parent="." instance=ExtResource("3_ib6dw")]
+position = Vector2(-200, -128)
+scale = Vector2(33.338, 27.0935)
+
+[node name="ResizableCrate" parent="." instance=ExtResource("4_yuxse")]
+position = Vector2(286, 339)
+
+[node name="ResizableCrate2" parent="." instance=ExtResource("4_yuxse")]
+position = Vector2(513, 243)
+
+[node name="ResizableCrate3" parent="." instance=ExtResource("4_yuxse")]
+position = Vector2(606, 562)
+
+[node name="Background" parent="." instance=ExtResource("6_wueat")]
+position = Vector2(501, 243)
+scale = Vector2(4.90451, 4.90451)
+
+[node name="Finish" parent="." instance=ExtResource("5_s8025")]
+position = Vector2(1009, 357)
+scale = Vector2(1.41974, 1.41974)

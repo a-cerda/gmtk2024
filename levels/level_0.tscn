@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=4 uid="uid://qietmfbi5l4g"]
+
+[ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_ids8w"]
+[ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_0cedc"]
+[ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_r4va5"]
+[ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="4_224a1"]
+[ext_resource type="PackedScene" uid="uid://bq4i5wxuoqihp" path="res://scenes/finish.tscn" id="5_3wly7"]
+[ext_resource type="PackedScene" uid="uid://c71crpf7oir31" path="res://scenes/background.tscn" id="6_yb0v3"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ids8w")]
+position = Vector2(232, 195)
+
+[node name="Terrain" parent="." instance=ExtResource("2_0cedc")]
+tile_map_data = PackedByteArray("AAABAAQAAwADAAAAAAACAAQAAwAFAAEAAAADAAQAAwAEAAIAAAAEAAQAAwADAAAAAAAFAAQAAwAEAAIAAAAGAAQAAwAEAAIAAAAHAAQAAwAEAAIAAAAIAAQAAwADAAAAAAAJAAQAAwAEAAIAAAAKAAQAAwAEAAIAAAALAAQAAwAEAAIAAAAMAAQAAwAFAAEAAAANAAQAAwADAAcAAAABAAUAAwAGAAkAAAACAAUAAwAGAAkAAAADAAUAAwAGAAkAAAAEAAUAAwAGAAkAAAAFAAUAAwAGAAkAAAAGAAUAAwAGAAkAAAAHAAUAAwAGAAkAAAAIAAUAAwAGAAkAAAAJAAUAAwAGAAkAAAAKAAUAAwAGAAkAAAABAAAAAwAGAAkAAAABAAEAAwAGAAkAAAABAAIAAwAGAAkAAAABAAMAAwAGAAkAAAALAAgAAwAGAAkAAAAKAAgAAwAGAAkAAAAJAAgAAwAGAAkAAAAIAAgAAwAGAAkAAAAHAAgAAwAGAAkAAAAGAAgAAwAGAAkAAAAOAAcAAwAGAAkAAAAPAAcAAwAGAAkAAAA=")
+
+[node name="ResizableCrate" parent="." instance=ExtResource("3_r4va5")]
+position = Vector2(705, 166)
+
+[node name="ResizableCrate2" parent="." instance=ExtResource("3_r4va5")]
+position = Vector2(1056, 324)
+
+[node name="RespawnBox" parent="." instance=ExtResource("4_224a1")]
+position = Vector2(35, -20)
+
+[node name="ResizableCrate3" parent="." instance=ExtResource("3_r4va5")]
+position = Vector2(738, 392)
+
+[node name="Finish" parent="." instance=ExtResource("5_3wly7")]
+position = Vector2(382, 430)
+scale = Vector2(1.4587, 1.4587)
+
+[node name="Sprite2D" parent="." instance=ExtResource("6_yb0v3")]
+position = Vector2(664, 380)
+scale = Vector2(5.46462, 5.46462)

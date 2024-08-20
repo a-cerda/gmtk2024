@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=4 uid="uid://4t5eid80ubsq"]
+
+[ext_resource type="PackedScene" uid="uid://crim0kxnxdiq5" path="res://scenes/player.tscn" id="1_2pin7"]
+[ext_resource type="PackedScene" uid="uid://woufd2sldqs5" path="res://scenes/terrain.tscn" id="2_so2os"]
+[ext_resource type="PackedScene" uid="uid://8gm3x82phuj2" path="res://scenes/resizable_crate.tscn" id="3_3ym8w"]
+[ext_resource type="PackedScene" uid="uid://c71crpf7oir31" path="res://scenes/background.tscn" id="4_g5dd4"]
+[ext_resource type="PackedScene" uid="uid://bq4i5wxuoqihp" path="res://scenes/finish.tscn" id="5_jma4t"]
+[ext_resource type="PackedScene" uid="uid://dqxtb4vhu4j8m" path="res://scenes/respawn_box.tscn" id="6_5fuk8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2pin7")]
+position = Vector2(1192, 266)
+
+[node name="Terrain" parent="." instance=ExtResource("2_so2os")]
+position = Vector2(424, 184)
+tile_map_data = PackedByteArray("AAD6//3/AwAGAAkAAAD6//7/AwAGAAkAAAD6////AwAGAAkAAAD6/wAAAwAGAAkAAAD7/wAAAwAGAAkAAAD8/wAAAwAGAAkAAAD9/wAAAwAGAAkAAAD9/wEAAwAGAAkAAAD9/wIAAwAGAAkAAAD9/wMAAwAGAAkAAAD9/wQAAwAGAAkAAAD9/wUAAwAGAAkAAAAFAAUAAwAGAAkAAAALAAIAAwAGAAkAAAAMAAIAAwAGAAkAAAANAAIAAwAGAAkAAAA=")
+
+[node name="ResizableCrate" parent="." instance=ExtResource("3_3ym8w")]
+position = Vector2(390, 467)
+
+[node name="ResizableCrate2" parent="." instance=ExtResource("3_3ym8w")]
+position = Vector2(559, 156)
+scale = Vector2(4.17776, 4.17776)
+
+[node name="Sprite2D" parent="." instance=ExtResource("4_g5dd4")]
+position = Vector2(443, 1192)
+scale = Vector2(4.25535, 4.12616)
+
+[node name="Finish" parent="." instance=ExtResource("5_jma4t")]
+position = Vector2(1426, 28)
+scale = Vector2(1.45908, 1.45908)
+
+[node name="RespawnBox" parent="." instance=ExtResource("6_5fuk8")]
+position = Vector2(-137, -175)
+scale = Vector2(42.3063, 34.3819)
+
+[node name="ResizableCrate3" parent="." instance=ExtResource("3_3ym8w")]
+position = Vector2(761, 417)
+
+[node name="ResizableCrate4" parent="." instance=ExtResource("3_3ym8w")]
+position = Vector2(998, 321)
+scale = Vector2(-2.16159, -2.16159)
+
+[node name="ResizableCrate5" parent="." instance=ExtResource("3_3ym8w")]
+position = Vector2(800, 226)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c71crpf7oir31"]
+
+[ext_resource type="Texture2D" uid="uid://mkfg8ts3qw37" path="res://sprites/background_glacial_mountains_lightened.png" id="1_7ovb4"]
+
+[node name="Sprite2D" type="Sprite2D"]
+z_index = -3
+position = Vector2(504, 283.5)
+scale = Vector2(3.625, 3.625)
+texture = ExtResource("1_7ovb4")
