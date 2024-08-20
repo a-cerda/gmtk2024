@@ -10,6 +10,10 @@
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="Background" parent="." instance=ExtResource("6_yb0v3")]
+position = Vector2(664, 380)
+scale = Vector2(5.46462, 5.46462)
+
 [node name="Player" parent="." instance=ExtResource("1_ids8w")]
 position = Vector2(232, 195)
 

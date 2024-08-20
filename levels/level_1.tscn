@@ -11,6 +11,10 @@
 [node name="Node2D" type="Node2D"]
 position = Vector2(213, 266)
 
+[node name="Background" parent="." instance=ExtResource("6_wueat")]
+position = Vector2(501, 243)
+scale = Vector2(4.90451, 4.90451)
+
 [node name="Player" parent="." instance=ExtResource("1_n2bc1")]
 position = Vector2(148, 273)
 
@@ -30,10 +34,6 @@ position = Vector2(513, 243)
 
 [node name="ResizableCrate3" parent="." instance=ExtResource("4_yuxse")]
 position = Vector2(606, 562)
-
-[node name="Background" parent="." instance=ExtResource("6_wueat")]
-position = Vector2(501, 243)
-scale = Vector2(4.90451, 4.90451)
 
 [node name="Finish" parent="." instance=ExtResource("5_s8025")]
 position = Vector2(1009, 357)
