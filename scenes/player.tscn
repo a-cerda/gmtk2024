@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://crim0kxnxdiq5"]
+[gd_scene load_steps=8 format=3 uid="uid://crim0kxnxdiq5"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_en5cw"]
 [ext_resource type="Texture2D" uid="uid://cxagkd6vg3ot0" path="res://sprites/character_squareRed.png" id="2_h18qg"]
 [ext_resource type="PackedScene" uid="uid://b2a6pblfqnoo8" path="res://scenes/gun.tscn" id="2_mwn4b"]
+[ext_resource type="AudioStream" uid="uid://bjt5d7v6du45o" path="res://audio/Proyecto 2_Main Theme_session.ogg" id="4_nyf70"]
+[ext_resource type="AudioStream" uid="uid://c88kee7bj5xil" path="res://audio/Step.wav" id="5_8ua5o"]
+[ext_resource type="AudioStream" uid="uid://durps5xefdvww" path="res://audio/jump.wav" id="6_h3obl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ocim"]
 size = Vector2(40, 62)
@@ -21,3 +24,17 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_3ocim")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Main Theme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nyf70")
+volume_db = -5.986
+autoplay = true
+playback_type = 1
+parameters/looping = true
+
+[node name="Step" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8ua5o")
+volume_db = 7.858
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_h3obl")
